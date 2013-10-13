@@ -413,7 +413,7 @@ public List<Set<GroundTerm>> getRandomSplit(DataStore data, double trainTestRati
 		}
 	}
 
-	trainInserter = data.getInserter(negated, trainPart);
+	/*trainInserter = data.getInserter(negated, trainPart);
 	testInserter = data.getInserter(negated, testPart);
 	for (GroundAtom a : Queries.getAllAtoms(db, negated)) {
 		if (trainSentKeys.contains(a.getArguments()[0])) {
@@ -421,7 +421,7 @@ public List<Set<GroundTerm>> getRandomSplit(DataStore data, double trainTestRati
 		} else {
 			testInserter.insertValue(a.getValue(), a.getArguments());
 		}
-	}
+	}*/
 	
 	trainInserter = data.getInserter(subsequent, trainPart);
 	testInserter = data.getInserter(subsequent, testPart);
