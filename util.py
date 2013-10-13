@@ -2,23 +2,23 @@ def words():
     """
     Return a dictionary from sentence ids to a list of words in that sentence.
     """
-    return to_many("data/blog2008/train/words.txt")
+    return to_many("data/ideological_books/words.txt")
 
 def sentences():
-    with open("data/blog2008/train/text.txt") as f:
+    with open("data/ideological_books/text.txt") as f:
         return {line.split()[0]: ' '.join(line.split()[1:]) for line in f}
 
 def docbias():
     """
     Return a dictionary from document ids to the document's bias.
     """
-    return to_one("data/blog2008/train/docbias.txt")
+    return to_one("data/ideological_books/docbias.txt")
 
 def indoc():
     """
     Return a dictionary from sentence ids to document ids.
     """
-    return to_one("data/blog2008/train/doc.txt")
+    return to_one("data/ideological_books/doc.txt")
 
 def to_one(fname):
     with open(fname) as f:
